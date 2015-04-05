@@ -13,8 +13,12 @@ class Musician(object):
         return self.name
 
 class Bassist(Musician):
-    def __init__(self):
+    def __init__(self, name):
         super(Bassist, self).__init__(["Twang", "Slap", "Boom"])
+        self.name = name
+
+    def toString(self):
+        super(Bassist, self).toString()
 
 class Guitarist(Musician):
     def __init__(self):
@@ -24,6 +28,9 @@ class Guitarist(Musician):
         print "I'll be with you in a minute"
         print "Twing, Ping"
 
+    def toString(self):
+        super(Guitarist, self).toString()
+
 class Drummer(Musician):
     def __init__(self):
         super(Drummer, self).__init__(["Boom", "Bang", "Thump"])
@@ -32,6 +39,9 @@ class Drummer(Musician):
         for i in range(1,5):
             print "{}, ".format(i)
             time.sleep(1)
+
+    def toString(self):
+        super(Drummer, self).toString()
 
     def combust(self):
         print "This drummer has combusted"
@@ -45,5 +55,8 @@ class Band(Musician):
         print "{}, Your fired!".format(Musician.toString())
 
 if __name__=="__main__":
-    dave = Drummer()
-    dave.countToFour()
+    dave = Musician(["Strum", "Pluck"], "David McMahon")
+    print dave.toString()
+
+    mark = Drummer
+    mark.toString()
