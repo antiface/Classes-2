@@ -4,7 +4,7 @@ class Musician(object):
 
     def solo(self, length):
         for i in range(length):
-            print(self.solo([i % len(self.sounds)]))
+            print(self.sounds([i % len(self.sounds)]))
 
     # def saySomething(self):
     #     print "Say Something method within Musician Class"
@@ -16,4 +16,4 @@ class Bassist(Musician):
 
 if __name__=="__main__":
     dave = Bassist()
-    dave.solo()
+    dave.solo(6)
