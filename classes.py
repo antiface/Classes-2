@@ -14,8 +14,7 @@ class Musician(object):
 
 class Bassist(Musician):
     def __init__(self, name):
-        super(Bassist, self).__init__(["Twang", "Slap", "Boom"])
-        self.name = name
+        super(Bassist, self).__init__(["Twang", "Slap", "Boom"], name)
 
     def toString(self):
         super(Bassist, self).toString()
@@ -58,5 +57,5 @@ if __name__=="__main__":
     dave = Musician(["Strum", "Pluck"], "David McMahon")
     print dave.toString()
 
-    mark = Band
-    mark.fire(dave)
+    mark = Bassist("Mark")
+    print mark.toString()
