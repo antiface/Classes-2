@@ -58,5 +58,5 @@ if __name__=="__main__":
     dave = Musician(["Strum", "Pluck"], "David McMahon")
     print dave.toString()
 
-    mark = Drummer
-    mark.toString()
+    mark = Band
+    mark.fire(dave)
