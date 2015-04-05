@@ -1,12 +1,16 @@
 import time
 
 class Musician(object):
-    def __init__(self, sounds):
+    def __init__(self, sounds, name):
         self.sounds = sounds
+        self.name = name
 
     def solo(self, length):
         for i in range(length):
             print(self.sounds[i % len(self.sounds)])
+
+    def toString(self):
+        return self.name
 
 class Bassist(Musician):
     def __init__(self):
@@ -34,11 +38,11 @@ class Drummer(Musician):
 
 class Band(Musician):
 
-    def hire(self):
-        print "Your hired!"
+    def hire(Musician):
+        print "{}, Your hired!".format(Musician.toString())
 
-    def fire(self):
-        print "Your fired!"
+    def fire(Musician):
+        print "{}, Your fired!".format(Musician.toString())
 
 if __name__=="__main__":
     dave = Drummer()
